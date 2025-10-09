@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "country": "Italy",
+    "country": "Italie",
     "participations": [
       {
         "id": 1,
@@ -28,7 +28,7 @@
   },
   {
     "id": 2,
-    "country": "Spain",
+    "country": "Espagne",
     "participations": [
       {
         "id": 1,
@@ -55,7 +55,7 @@
   },
   {
     "id": 3,
-    "country": "United States",
+    "country": "Etats Unis",
     "participations": [
       {
         "id": 1,
@@ -82,7 +82,7 @@
   },
   {
     "id": 4,
-    "country": "Germany",
+    "country": "Allemagne",
     "participations": [
       {
         "id": 1,
@@ -131,6 +131,40 @@
         "city": "Tokyo",
         "medalsCount": 33,
         "athleteCount": 403
+      },
+      {
+        "id": 4,
+        "year": 2024,
+        "city": "Paris",
+        "medalsCount": 56,
+        "athleteCount": 321
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "country": "Belgique",
+    "participations": [
+      {
+        "id": 1,
+        "year": 2012,
+        "city": "Londres",
+        "medalsCount": 12,
+        "athleteCount": 158
+      },
+      {
+        "id": 2,
+        "year": 2016,
+        "city": "Rio de Janeiro",
+        "medalsCount": 7,
+        "athleteCount": 158
+      },
+      {
+        "id": 3,
+        "year": 2020,
+        "city": "Tokyo",
+        "medalsCount": 16,
+        "athleteCount": 158
       }
     ]
   }

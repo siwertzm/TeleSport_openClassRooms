@@ -21,6 +21,31 @@ $teal: #84bae0;
   padding: 1rem 1.25rem;
 }
 
+.retour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54.39px;
+  width: 54.39px;
+  border-radius: 50%;
+  border: 2px solid $teal;
+  color: $teal;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $teal;
+    border: 2px solid $teal;
+    color: #fff;
+    transform: translateX(-3px);
+  }
+
+  i {
+    pointer-events: none; // permet de cliquer sur toute la zone
+  }
+}
+
 .label {
   color: #6c757d;
   margin-bottom: .25rem;
@@ -41,8 +66,7 @@ $teal: #84bae0;
   display: flex;
   justify-content: center;   /* centre horizontalement */
   align-items: center;       /* centre verticalement si hauteur fixe */
-  width: 100%;
-  margin: 40px auto;         /* espace autour */
+  width: 100%;        /* espace autour */
   overflow: visible !important;
 }
 

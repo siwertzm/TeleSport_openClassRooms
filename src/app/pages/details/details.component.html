@@ -1,0 +1,60 @@
+<section class="medals-section container my-4" *ngIf="country$ | async as country">
+  <div class="row justify-content-center g-3 mt-3">
+    <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+      <div class="retour" (click)="gohome()">
+         <i class="bi bi-caret-left-fill"></i>
+      </div>
+    </div>
+    <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+      <h2 class="section-title">{{ country.country }}</h2>
+    </div>
+    <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+    </div>
+  </div>
+  
+
+  <div class="row justify-content-center g-3 mt-3">
+    <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+      <div class="stat-card">
+        <div class="label">Nombre de JO</div>
+        <div class="value">{{ nbJos$ | async }}</div>
+      </div>
+    </div>
+
+    <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+      <div class="stat-card">
+        <div class="label">Nombre de médailles</div>
+        <div class="value">{{ nbMedals$ | async }}</div>
+      </div>
+    </div>
+
+    <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+      <div class="stat-card">
+        <div class="label">Nombre d'athlètes</div>
+        <div class="value">{{ nbAthletes$ | async }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chart-section container my-4">
+  <div class="chart-container">
+    <ngx-charts-line-chart
+    [view]="view"
+    [scheme]="colorSchemeName"
+    [legend]="legend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxis]="xAxis"
+    [yAxis]="yAxis"
+    [xAxisLabel]="xAxisLabel"
+    [timeline]="timeline"
+    [results]="lineData$ | async"
+    (select)="onSelect($event)"
+    (activate)="onActivate($event)"
+    (deactivate)="onDeactivate($event)"
+    >
+  </ngx-charts-line-chart>
+  </div>
+</section>
+

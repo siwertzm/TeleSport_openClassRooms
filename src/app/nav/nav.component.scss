@@ -1,0 +1,25 @@
+$teal: #84bae0;
+
+
+.logo-nav {
+  height: 40px; // Ajustez selon vos besoins
+  width: auto;
+  max-height: 50px; // Limite la hauteur maximale
+}
+.logo-titre {
+  font-weight: bold;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;   // aligne verticalement le logo et le texte
+}
+
+form input {
+  border-radius: 1rem;
+  transition: width 0.3s ease;
+  width: 200px;
+
+  &:focus {
+    width: 250px;
+  }
+}
