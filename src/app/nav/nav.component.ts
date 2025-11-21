@@ -32,7 +32,7 @@ export class NavbarComponent {
           this.router.navigate(['/details', country.country]);
         } else {
           // 🚫 Pays non trouvé
-          alert('Pays non trouvé 😢');
+          this.router.navigate(['/not-found']);
         }
       });
   }

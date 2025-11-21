@@ -15,8 +15,11 @@ const routes: Routes = [
   },
   {
     path: '**', // wildcard
-    component: NotFoundComponent,
-  },
+    redirectTo: 'not-found'
+  },{
+    path: 'not-found',
+    component: NotFoundComponent
+  }
 ];
 
 @NgModule({

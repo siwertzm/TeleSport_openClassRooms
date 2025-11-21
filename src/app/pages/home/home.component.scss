@@ -39,15 +39,25 @@ $teal: #84bae0;
 
 .chart-container {
   display: flex;
-  justify-content: center;   /* centre horizontalement */
-  align-items: center;       /* centre verticalement si hauteur fixe */
+  justify-content: center;   
+  align-items: center;       
   width: 100%;
-  margin: 40px auto;         /* espace autour */
+  margin: 40px auto;         
   overflow: visible !important;
 }
 
-/* Forcer le tooltip de ngx-charts à apparaître au-dessus de tout */
+
 ngx-tooltip-content {
   z-index: 9999 !important;
-  pointer-events: none; /* évite les blocages au survol */
+  pointer-events: none; 
+}
+
+::ng-deep .ngx-charts-tooltip-content div:nth-child(2)::after {
+  content:"🏅";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-18%);
+
+  font-size: 16px;
 }
