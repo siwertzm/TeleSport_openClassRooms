@@ -1,29 +1,114 @@
-# OlympicGamesStarter
+📺 TéléSport — Tableau de Bord des Jeux Olympiques
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+TéléSport est une application Angular permettant de visualiser les statistiques des Jeux Olympiques : pays participants, médailles, années, participations et performances.
+Elle propose une interface moderne, responsive, et facile à utiliser grâce à l’intégration de graphiques interactifs.
 
-Don't forget to install your node_modules before starting (`npm install`).
+🚀 Fonctionnalités
 
-## Development server
+🎯 Dashboard dynamique : nombre total de JO, nombre de pays participants
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+📊 Graphique en camembert interactif (ngx-charts) affichant les médailles par pays
 
-## Build
+🌍 Page Détails d’un pays : années, villes, médailles, athlètes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+⚠️ Page NotFound personnalisée pour les erreurs de navigation
 
-## Where to start
+🔎 Barre de recherche intégrée dans la navbar
 
-As you can see, an architecture has already been defined for the project. It is just a suggestion, you can choose to use your own. The predefined architecture includes (in addition to the default angular architecture) the following:
+📡 Service dédié (OlympicService) pour charger les données JSON
 
-- `components` folder: contains every reusable components
-- `pages` folder: contains components used for routing
-- `core` folder: contains the business logic (`services` and `models` folders)
+📱 Design responsive compatible mobile et desktop
 
-I suggest you to start by understanding this starter code. Pay an extra attention to the `app-routing.module.ts` and the `olympic.service.ts`.
+🛠️ Installation
 
-Once mastered, you should continue by creating the typescript interfaces inside the `models` folder. As you can see I already created two files corresponding to the data included inside the `olympic.json`. With your interfaces, improve the code by replacing every `any` by the corresponding interface.
+Installer les dépendances :
 
-You're now ready to implement the requested features.
+npm install
 
-Good luck!
+
+Lancer l’application :
+
+ng serve
+
+
+Accéder à l’application :
+👉 http://localhost:4200/
+
+🛠️ Build
+
+Pour construire l’application pour la production :
+
+ng build
+
+
+Le résultat sera dans le dossier dist/.
+
+📂 Architecture du projet
+src/
+ ├── app/
+ │    ├── core/
+ │    │     └── nav/            # Composant Navbar global
+ │    │     └── services/       # Logique métier (OlympicService)
+ │    │     └── models/         # Interfaces TypeScript
+ │    ├── pages/
+ │    │     ├── home/           # Page d’accueil (dashboard)
+ │    │     ├── details/        # Page détails d’un pays
+ │    │     └── not-found/      # Page 404
+ │    ├── app-routing.module.ts # Définition des routes
+ │    └── app.component.*       # Composant racine
+ ├── assets/
+ │    └── olympic.json          # Données d’entrée
+ ├── index.html
+ └── styles.scss
+
+🔧 Développement conseillé
+1. Comprendre la logique
+
+Les fichiers à étudier en priorité :
+
+app-routing.module.ts
+
+olympic.service.ts
+
+home.component.ts
+
+2. Utiliser les interfaces
+
+Dans core/models, créer les interfaces pour représenter :
+
+un pays
+
+une participation
+
+les données de médailles
+
+Cela permet de remplacer les any et de sécuriser ton code.
+
+3. Ajouter ses fonctionnalités
+
+Une fois les bases comprises, tu peux améliorer :
+
+la recherche (ex : aller automatiquement à /details/:country)
+
+le tooltip du pie chart
+
+l’affichage des détails (graphes supplémentaires, filtres…)
+
+le design global de TéléSport
+
+🧰 Technologies utilisées
+
+⚡ Angular 18
+
+📊 ngx-charts
+
+🎨 Bootstrap 5
+
+🧠 RxJS
+
+🗂️ TypeScript
+
+🎉 À propos
+
+TéléSport a pour objectif de proposer une interface simple, visuelle et moderne pour explorer les données olympiques.
+Ce projet est une excellente base pour apprendre Angular, manipuler des données, et créer des visualisations interactives.
