@@ -1,49 +1,45 @@
-📺 TéléSport — Tableau de Bord des Jeux Olympiques
+# TéléSport — Tableau de Bord des Jeux Olympiques
 
-TéléSport est une application Angular permettant de visualiser les statistiques des Jeux Olympiques : pays participants, médailles, années, participations et performances.
+TéléSport est une application Angular permettant de visualiser les statistiques des Jeux Olympiques : pays participants, médailles, années, participations et performances. 
 Elle propose une interface moderne, responsive, et facile à utiliser grâce à l’intégration de graphiques interactifs.
 
-🚀 Fonctionnalités
+## 🚀 Fonctionnalités
 
-🎯 Dashboard dynamique : nombre total de JO, nombre de pays participants
+- Dashboard dynamique : nombre total de JO, nombre de pays participants  
+- Graphique en camembert interactif (ngx-charts) affichant les médailles par pays  
+- Page Détails d’un pays : années, villes, médailles, athlètes  
+- Page NotFound personnalisée pour les erreurs de navigation  
+- Barre de recherche intégrée dans la navbar  
+- Service dédié (OlympicService) pour charger les données JSON  
+- Design responsive compatible mobile et desktop  
 
-📊 Graphique en camembert interactif (ngx-charts) affichant les médailles par pays
+## 🛠️ Installation
 
-🌍 Page Détails d’un pays : années, villes, médailles, athlètes
-
-⚠️ Page NotFound personnalisée pour les erreurs de navigation
-
-🔎 Barre de recherche intégrée dans la navbar
-
-📡 Service dédié (OlympicService) pour charger les données JSON
-
-📱 Design responsive compatible mobile et desktop
-
-🛠️ Installation
-
-Installer les dépendances :
-
+1. Installer les dépendances :
+```
 npm install
+```
 
-
-Lancer l’application :
-
+2. Lancer l’application :
+```
 ng serve
+```
 
+3. Accéder à l’application :  
+http://localhost:4200/
 
-Accéder à l’application :
-👉 http://localhost:4200/
-
-🛠️ Build
+## 🛠️ Build
 
 Pour construire l’application pour la production :
 
+```
 ng build
-
+```
 
 Le résultat sera dans le dossier dist/.
 
-📂 Architecture du projet
+## 📂 Architecture du projet
+
 src/
  ├── app/
  │    ├── core/
@@ -61,54 +57,11 @@ src/
  ├── index.html
  └── styles.scss
 
-🔧 Développement conseillé
-1. Comprendre la logique
+## 🧰 Technologies utilisées
 
-Les fichiers à étudier en priorité :
+- Angular 18  
+- ngx-charts  
+- Bootstrap 5  
+- RxJS  
+- TypeScript  
 
-app-routing.module.ts
-
-olympic.service.ts
-
-home.component.ts
-
-2. Utiliser les interfaces
-
-Dans core/models, créer les interfaces pour représenter :
-
-un pays
-
-une participation
-
-les données de médailles
-
-Cela permet de remplacer les any et de sécuriser ton code.
-
-3. Ajouter ses fonctionnalités
-
-Une fois les bases comprises, tu peux améliorer :
-
-la recherche (ex : aller automatiquement à /details/:country)
-
-le tooltip du pie chart
-
-l’affichage des détails (graphes supplémentaires, filtres…)
-
-le design global de TéléSport
-
-🧰 Technologies utilisées
-
-⚡ Angular 18
-
-📊 ngx-charts
-
-🎨 Bootstrap 5
-
-🧠 RxJS
-
-🗂️ TypeScript
-
-🎉 À propos
-
-TéléSport a pour objectif de proposer une interface simple, visuelle et moderne pour explorer les données olympiques.
-Ce projet est une excellente base pour apprendre Angular, manipuler des données, et créer des visualisations interactives.
