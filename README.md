@@ -38,24 +38,6 @@ ng build
 
 Le résultat sera dans le dossier dist/.
 
-## 📂 Architecture du projet
-
-src/
- ├── app/
- │    ├── core/
- │    │     └── nav/            # Composant Navbar global
- │    │     └── services/       # Logique métier (OlympicService)
- │    │     └── models/         # Interfaces TypeScript
- │    ├── pages/
- │    │     ├── home/           # Page d’accueil (dashboard)
- │    │     ├── details/        # Page détails d’un pays
- │    │     └── not-found/      # Page 404
- │    ├── app-routing.module.ts # Définition des routes
- │    └── app.component.*       # Composant racine
- ├── assets/
- │    └── olympic.json          # Données d’entrée
- ├── index.html
- └── styles.scss
 
 ## 🧰 Technologies utilisées
 
