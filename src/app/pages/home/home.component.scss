@@ -46,6 +46,19 @@ $teal: #84bae0;
   overflow: visible !important;
 }
 
+@media (max-width: 768px) {
+  .chart-container {
+    flex-direction: column;
+    margin: 20px auto;   
+    padding: 0 10px;
+  }
+
+  .chart-wrapper {
+    width: 100% !important;
+    height: auto !important;
+  } 
+}
+
 
 ngx-tooltip-content {
   z-index: 9999 !important;

@@ -75,4 +75,14 @@ export class HomeComponent implements OnInit {
     const countryName = e.name;
     this.router.navigate(['/details', countryName])
   }
+
+ngAfterViewInit() {
+  this.updateView();
+  window.addEventListener('resize', () => this.updateView());
+}
+
+updateView() {
+  const width = document.querySelector('.chart-container')!.clientWidth;
+  this.view = [width, width * 0.6];
+}
 }
