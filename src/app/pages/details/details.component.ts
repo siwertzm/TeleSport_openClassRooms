@@ -101,5 +101,15 @@ export class DetailsComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  ngAfterViewInit() {
+  this.updateView();
+  window.addEventListener('resize', () => this.updateView());
+}
+
+updateView() {
+  const width = document.querySelector('.chart-container')!.clientWidth;
+  this.view = [width, width * 0.6];
+}
+
   
 }
